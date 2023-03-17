@@ -12,6 +12,9 @@ const configuration = new Configuration({
 });
 
 const openai = new OpenAIApi(configuration);
+const headers = {
+  'Authorization': `Bearer ${process.env.OPENAI_API_KEY}`,
+};
 
 const app = express()
 app.use(cors())
